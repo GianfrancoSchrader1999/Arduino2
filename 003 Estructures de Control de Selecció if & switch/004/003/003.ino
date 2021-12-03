@@ -1,6 +1,6 @@
 /**********************************************************************************
 **                                                                               **
-**                          Control Structures  2                                **
+**                          Control Structures                                   **
 **                                                                               **
 **                                                                               **
 **********************************************************************************/
@@ -8,7 +8,7 @@
 //********** Includes *************************************************************
 
 //********** Variables ************************************************************
-int tempAigua = 20;
+int tempAigua = 100;
 
 //********** Setup ****************************************************************
 void setup()              // run once, when the sketch starts
@@ -19,18 +19,10 @@ void setup()              // run once, when the sketch starts
   {
     Serial.print("Aigua supera els 100C, esta bullint!");
   } 
-  else if (tempAigua == 100) 
+  if (tempAigua <= 100)
   {
-    Serial.print("Aigua a 100c!");
-  }   
-  else if (tempAigua >= 90 && tempAigua < 100)
-  {
-    Serial.print("Aigua apunt de bullir!");
-  }
-  else  
-  {
-    Serial.print("Aigua encara no bull!");
-  }
+    Serial.print("Aigua no supera els 100C, encara no bull!");
+  } 
 }
 
 //********** Loop *****************************************************************
